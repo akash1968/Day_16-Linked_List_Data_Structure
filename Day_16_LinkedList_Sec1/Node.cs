@@ -7,7 +7,7 @@ namespace Day_16_LinkedList_Sec1
     //The node of a singly linked list contains a data part and a link part
     //The link will contain the address of next node and is initialized to null
 
-    class Node
+   public class Node
     {
         public int data;
         public Node next;

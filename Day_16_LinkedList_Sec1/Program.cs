@@ -8,13 +8,12 @@ namespace Day_16_LinkedList_Sec1
         {
             //Creating an object of Linked List
             LinkedList list = new LinkedList();
-            //Inserting Elements at the front of the linked list
+            //Searching for an particular element in the linked list the linked list
             list.InsertLast(56);
             list.InsertLast(30);
             list.InsertLast(70);
-            //Deleting Last node in the list
-            list.DeleteLastNode();
-            list.Display();
+            Console.WriteLine("Searching for 30 "+ list.Search(30));
+            list.Display();    
             Console.ReadLine();
         }
     }

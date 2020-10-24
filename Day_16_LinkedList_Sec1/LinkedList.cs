@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Day_16_LinkedList_Sec1
 {
-    class LinkedList
+   public class LinkedList
     {
         public Node head;
         //UC 3 - Create a simple Linked List of 56,30,70
@@ -90,6 +90,27 @@ namespace Day_16_LinkedList_Sec1
             //to delete the third node as it is allocated to garbage collection
             newNode.next = null;
             return null;
+        }
+        // UC_7- Search for an particular Element in the Linked List
+       //Taking the node value as parameter
+        public bool Search(int value)
+        {
+            
+            //initialising a temp variable for checking head pointer
+            Node temp = this.head;
+            // iterating for atleast one node
+            while (temp!= null)
+            {
+                //if the entered value is equal to the data in node then displaying true
+                if (temp.data == value)
+                {
+                    Console.WriteLine(" Node is Found ");
+                    return true;
+                }
+                temp = temp.next;
+            }
+            Console.WriteLine("Node is not found ");
+            return false;
         }
     }
 }
