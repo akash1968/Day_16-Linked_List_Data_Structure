@@ -11,7 +11,7 @@ namespace Day_16_LinkedList_Sec1
         // Insert Last Method
         public void InsertLast(int new_data)
         {
-            //Creating an object of Node
+            //Creating a new new node. The next of the new node will point to the head of the Linked List
             Node new_node = new Node(new_data);
             if (this.head == null)
             {
@@ -53,11 +53,22 @@ namespace Day_16_LinkedList_Sec1
             {
                 while(temp !=null)
                 {
-                    Console.WriteLine(" "+temp.data);
+                    Console.Write(" "+temp.data);
                     //checking if other nodes are present in the list by moving the temp to next node
                     temp = temp.next;
                 }
             }
+        }
+        //UC2- Insert Elements from Front in Linked List
+        public void InsertFront(int new_data)
+        {
+            //Creating a new new node. The next of the new node will point to the head of the Linked List
+            Node new_node = new Node(new_data);
+            // To add any node at the front , we want the head to point to it.
+            new_node.next = this.head;
+            //The previous head node is now the second node of Linked List because the new node is added at the front.
+            this.head = new_node;
+            Console.WriteLine("Inserted into list "+new_node.data);
         }
             
 
