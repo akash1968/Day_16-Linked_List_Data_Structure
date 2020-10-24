@@ -12,8 +12,8 @@ namespace Day_16_LinkedList_Sec1
             list.InsertLast(56);
             list.InsertLast(30);
             list.InsertLast(70);
-            //Deleting First node in the list
-            list.DeleteFirstNode();
+            //Deleting Last node in the list
+            list.DeleteLastNode();
             list.Display();
             Console.ReadLine();
         }
