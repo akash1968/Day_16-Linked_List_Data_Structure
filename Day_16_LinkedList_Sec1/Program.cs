@@ -8,10 +8,12 @@ namespace Day_16_LinkedList_Sec1
         {
             //Creating an object of Linked List
             LinkedList list = new LinkedList(); 
-            //Inserting Elements at the front of the linked list
-            list.InsertLast(56);
-            list.InsertLast(30);
-            list.InsertLast(70);
+            // UC4--Inserting Elements at the particular position in the linked list
+            list.Add(56);
+            list.Add(30);
+            list.Add(70);          
+            int a = list.Search(30);
+            list.InsertAtParticularPosition(a+1,40);          
             list.Display();
             Console.ReadLine();
         }
