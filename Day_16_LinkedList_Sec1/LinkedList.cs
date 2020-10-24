@@ -70,5 +70,26 @@ namespace Day_16_LinkedList_Sec1
             this.head = this.head.next;
             return this.head;
         }
+        //UC-6- Delete The Last Element in the Linked List
+        public Node DeleteLastNode()
+        {
+            if(this.head==null)
+            {
+                return null;
+            }
+            if(this.head.next==null)
+            {
+                return null;
+            }
+            Node newNode = this.head;
+            //Checking if the third node is not equal to null
+            while(newNode.next.next!=null)
+            {
+                newNode = newNode.next;  
+            }
+            //to delete the third node as it is allocated to garbage collection
+            newNode.next = null;
+            return null;
+        }
     }
 }
