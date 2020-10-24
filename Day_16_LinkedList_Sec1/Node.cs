@@ -11,10 +11,10 @@ namespace Day_16_LinkedList_Sec1
     {
         public int data;
         public Node next;
-        public Node(int d)
+        public Node(int data)
         {
-            data = d;
-            next = null;
+           this.data = data;
+            this.next = null;
         }
     }
 }
