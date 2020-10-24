@@ -7,8 +7,8 @@ namespace Day_16_LinkedList_Sec1
     class LinkedList
     {
         public Node head;
-        //UC 1 - Create a simple Linked List of 56,30,70
-        // Insert Last Method
+        //UC 3 - Create a simple Linked List of 56,30,70
+        // Append Elements at Last In Linked List 
         public void InsertLast(int new_data)
         {
             //Creating a new new node. The next of the new node will point to the head of the Linked List
@@ -59,17 +59,7 @@ namespace Day_16_LinkedList_Sec1
                 }
             }
         }
-        //UC2- Insert Elements from Front in Linked List
-        public void InsertFront(int new_data)
-        {
-            //Creating a new new node. The next of the new node will point to the head of the Linked List
-            Node new_node = new Node(new_data);
-            // To add any node at the front , we want the head to point to it.
-            new_node.next = this.head;
-            //The previous head node is now the second node of Linked List because the new node is added at the front.
-            this.head = new_node;
-            Console.WriteLine("Inserted into list "+new_node.data);
-        }
+       
             
 
     }
