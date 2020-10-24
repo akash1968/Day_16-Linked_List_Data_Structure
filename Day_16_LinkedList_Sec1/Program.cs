@@ -9,9 +9,9 @@ namespace Day_16_LinkedList_Sec1
             //Creating an object of Linked List
             LinkedList list = new LinkedList(); 
             //Inserting Elements at the front of the linked list
-            list.InsertFront(70);
-            list.InsertFront(30);
-            list.InsertFront(56);
+            list.InsertLast(56);
+            list.InsertLast(30);
+            list.InsertLast(70);
             list.Display();
             Console.ReadLine();
         }
