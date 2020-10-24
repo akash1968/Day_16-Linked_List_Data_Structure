@@ -7,10 +7,11 @@ namespace Day_16_LinkedList_Sec1
         static void Main(string[] args)
         {
             //Creating an object of Linked List
-            LinkedList list = new LinkedList();
-            list.InsertLast(56);
-            list.InsertLast(30);
-            list.InsertLast(70);
+            LinkedList list = new LinkedList(); 
+            //Inserting Elements at the front of the linked list
+            list.InsertFront(70);
+            list.InsertFront(30);
+            list.InsertFront(56);
             list.Display();
             Console.ReadLine();
         }
