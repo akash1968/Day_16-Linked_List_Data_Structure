@@ -14,12 +14,21 @@ namespace Day_16_LinkedList_Sec1
         {
             //Creating an object of Linked List
             LinkedList list = new LinkedList();
-            // UC8--Ability to search node 30 and insert node 40 after it in the linked list
+            // UC9- Ability to delete a particular node
             list.Add(56);
             list.Add(30);
+            list.Add(40);
             list.Add(70);
-            list.InsertAtParticularPosition(30, 40);
-            list.Display();
+            Console.WriteLine("Enter the element to be deleted ");
+            int del = Convert.ToInt32(Console.ReadLine());
+            int ifPresent = list.SearchForAnElement(del);
+            if (ifPresent >= 1)
+            {
+                list.DeleteElement(del);
+                list.Display();
+            }
+            // Showing the size of the list
+            Console.WriteLine("\nSize of the list after deleting "+list.SizeOfList());
             Console.ReadLine();
         }
     }
