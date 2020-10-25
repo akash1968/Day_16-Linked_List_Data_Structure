@@ -12,7 +12,7 @@ namespace MSTestForLinkedList
     [TestClass]
     public class UnitTest1
     {
-        [DataRow(30,40)]
+        [DataRow(30, 40)]
         [TestCategory("Testing the position of the node")]
         [TestMethod]
         public void EnterAfterPositionTest(int value, int position)
@@ -22,7 +22,7 @@ namespace MSTestForLinkedList
             //Act
             int expected = 40;
             int actual = list.InsertAtParticularPosition(30, 40);
-            //Assert
+           //Assert
             Assert.AreEqual(expected, actual);
         }
     }
