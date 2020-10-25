@@ -39,7 +39,7 @@ namespace Day_16_LinkedList_Sec1
         // Method to Display the Linked List
         public void Display()
         {
-            Console.WriteLine("Displaying Nodes After Adding the new element ");
+            Console.WriteLine("Displaying Nodes After Sorting ");
             //creating a copy of head and storing in temp variable
             //temporary variable to check if head is pointing to null or not
             Node temp = this.head;
@@ -198,6 +198,32 @@ namespace Day_16_LinkedList_Sec1
                 }
             }
         }
-
+        // UC 10- Sorting the elements of the Linked List In the Ascending order
+        public void sortLinkedList()
+        {
+            // Checking If head is pointing to null or not
+            if (this.head == null)
+            {
+                Console.WriteLine("The LinkedList is Empty");
+            }
+            else
+            {
+                //temporary variable to check if head is pointing to null or not and traverse along the linked list
+                Node temp = this.head;
+                // iterating along the linked list
+                while (temp.next != null)
+                {
+                    int temp2 = 0;
+                    // checking if the previous data is greater than the next data in the pointer
+                    if (temp.data > temp.next.data)
+                    {
+                        temp2 = temp.data;
+                        temp.data = temp.next.data;
+                        temp.next.data = temp2;
+                    }
+                    temp = temp.next;
+                }
+            }
+        }
     }
 }
