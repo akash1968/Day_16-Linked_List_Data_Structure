@@ -1,19 +1,25 @@
-﻿using System;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="Program.cs" company="Bridgelabz">
+//   Copyright © 2018 Company
+// </copyright>
+// <creator Name="Akash Kumar Singh"/>
+// --------------------------------------------------------------------------------------------------------------------
+using System;
 
 namespace Day_16_LinkedList_Sec1
 {
-    class Program
+     public class Program
     {
         static void Main(string[] args)
         {
             //Creating an object of Linked List
             LinkedList list = new LinkedList();
-            //Searching for an particular element in the linked list the linked list
-            list.InsertLast(56);
-            list.InsertLast(30);
-            list.InsertLast(70);
-            Console.WriteLine("Searching for 30 "+ list.Search(30));
-            list.Display();    
+            // UC8--Ability to search node 30 and insert node 40 after it in the linked list
+            list.Add(56);
+            list.Add(30);
+            list.Add(70);
+            list.InsertAtParticularPosition(30, 40);
+            list.Display();
             Console.ReadLine();
         }
     }
