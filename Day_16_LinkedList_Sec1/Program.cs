@@ -14,21 +14,13 @@ namespace Day_16_LinkedList_Sec1
         {
             //Creating an object of Linked List
             LinkedList list = new LinkedList();
-            // UC9- Ability to delete a particular node
+            // UC 10- Sorting the elements of the Linked List In the Ascending order
             list.Add(56);
             list.Add(30);
             list.Add(40);
             list.Add(70);
-            Console.WriteLine("Enter the element to be deleted ");
-            int del = Convert.ToInt32(Console.ReadLine());
-            int ifPresent = list.SearchForAnElement(del);
-            if (ifPresent >= 1)
-            {
-                list.DeleteElement(del);
-                list.Display();
-            }
-            // Showing the size of the list
-            Console.WriteLine("\nSize of the list after deleting "+list.SizeOfList());
+            list.sortLinkedList();
+            list.Display();
             Console.ReadLine();
         }
     }
